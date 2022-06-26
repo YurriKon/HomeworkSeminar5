@@ -18,13 +18,13 @@ Console.WriteLine("Массив случайных чисел:");
 PrintArrayRand(array);
 Console.WriteLine();
 
-void PrintEvenSumArray(int[] array)
+void PrintOddSumArray(int[] array)
 {
     int count = array.Length;
     int sum = 0;
     for (int i = 0; i < count; i++)
     {
-        if (array[i]%2 == 0)
+        if (array[i]%2 == 1)
         {
             sum = sum + array[i];
         }
@@ -32,6 +32,6 @@ void PrintEvenSumArray(int[] array)
     Console.WriteLine(sum);
 }
 
-Console.WriteLine("Сумма всех четных элементов:");
+Console.WriteLine("Сумма всех нечетных элементов:");
 PrintEvenSumArray(array);
 */

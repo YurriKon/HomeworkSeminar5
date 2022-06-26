@@ -1,4 +1,4 @@
-/*
+
 
 //Задача 34: Задайте массив, заполненный случайными положительными трёхзначными числами. 
 //Напишите программу, которая покажет количество чётных чисел в массиве.
@@ -18,40 +18,19 @@ void PrintArrayRand(int[] array)
 Console.WriteLine("Массив случайных трехзначных чисел:");
 PrintArrayRand(array);
 Console.WriteLine();
-void SortArray(int[] array)
+
+void SumEvenArray(int[] array)
 {
-for (int i = 0; i < array.Length - 1; i++)
-{
-    int minPosition = i;
-    for (int j = i + 1; j < array.Length; j++)
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
     {
-       if (array[j] < array[minPosition])
-       {
-        minPosition = j;
-       }
+        
+        if (array[i]%2 == 0) count++;
+        
     }
-    int temporary = array[i];
-    array[i] = array[minPosition];
-    array[minPosition] = temporary;
-}
-}
+    Console.WriteLine($"Количество четных элементов: {count}");
+    
 
-void PrintArraySorted(int[] array)
-{
-    int count = array.Length;
-    for (int i = 0; i < count; i++)
-    {
-        Console.Write($"{array[i]} ");
-    }
 }
 
-SortArray(array);
-Console.WriteLine("Отсортированный массив:");
-PrintArraySorted(array);
-
-
-    Console.WriteLine();
-    Console.WriteLine("Разность между максимальным и минимальным значениями:");
-    int deduction = array[array.Length -1] - array[0];
-    Console.WriteLine(deduction);
-*/
+SumEvenArray(array);
